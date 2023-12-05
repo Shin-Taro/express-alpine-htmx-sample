@@ -8,7 +8,11 @@
   "author": "Shin-Taro <sh.takahashi.113@gmail.com>",
   "license": "none",
   "scripts": {
-    "start": "node ./bin/www"
+    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "clean": "rm -Rf dist",
+    "tsc": "tsc",
+    "build": "clean && tsc",
+    "start": "node ./dist/index.ts"
   },
   "dependencies": {
     "cookie-parser": "^1.4.4",
