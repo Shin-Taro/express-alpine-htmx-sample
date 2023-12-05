@@ -5,7 +5,7 @@ import express, { ErrorRequestHandler, NextFunction } from "express"
 import cookieParser from "cookie-parser"
 
 import logger from "morgan"
-import { router } from "@handlers"
+import { router } from "@app/handlers"
 
 export const app = express()
 
