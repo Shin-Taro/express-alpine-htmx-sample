@@ -9,8 +9,6 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
     "tsc": "tsc",
-    "build": "rm -Rf dist && tsc",
-    "start": "node ./dist/index.ts",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings 0 --cache",
     "fix": "prettier \"./src/**/*.{ts,tsx}\" --write --ignore-path .gitignore && eslint \"./src/**/*.{ts,tsx}\" --fix --max-warnings 0 --cache"
   },
