@@ -2,12 +2,10 @@
 import createError from "http-errors"
 
 import express, { ErrorRequestHandler, NextFunction } from "express"
-import path from "node:path"
 import cookieParser from "cookie-parser"
 
 import logger from "morgan"
-
-import { homeRoute } from "../routes/index"
+import { router } from "@handlers"
 
 export const app = express()
 
@@ -15,14 +13,17 @@ app.use(logger("dev"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static("src/public"))
 
-app.use("/", homeRoute)
+// application registration
+app.use("/", router)
 
+// 404 handler
 app.use((_, __, next: NextFunction) => {
   next(createError(404))
 })
 
+// error handler
 const errorHandler: ErrorRequestHandler = (error, request, res) => {
   if (error instanceof Error) {
     res.locals.message = error.message
