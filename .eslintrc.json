@@ -1,11 +1,17 @@
 {
   "root": false,
   "env": {
-    "browser": true,
     "node": true
   },
   "parserOptions": {
     "project": ["./tsconfig.json"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   },
   "extends": [
     "eslint:recommended",
@@ -42,17 +48,18 @@
       {
         ".js": "always",
         ".ts": "always",
-        ".tax": "always"
+        ".tsx": "always"
       }
     ],
     "camelcase": "off",
-    // static exportするためimgタグを使用する
     "unicorn/prevent-abbreviations": [
       "warn",
       {
         "allowList": {
           "props": true,
-          "Props": true
+          "Props": true,
+          "req": true,
+          "res": true
         }
       }
     ],
