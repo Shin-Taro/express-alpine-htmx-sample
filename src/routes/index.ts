@@ -1,9 +1,9 @@
-var express = require("express");
-var router = express.Router();
+import express, { RequestHandler } from "express"
 
-/* GET home page. */
-router.get("/", function (req: any, res: any, next: any) {
-  res.send("Hello World!");
-});
+export const homeRoute = express.Router()
 
-module.exports = router;
+const handler: RequestHandler = (_, res) => {
+  res.send("Hello World!")
+}
+
+homeRoute.get("/", handler)
