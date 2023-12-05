@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Sample project of UI construction with Alpine.js and htmx and server-side rendering with Express and jsx.",
-  "main": "index.js",
   "repository": "git@github_Shin-Taro:Shin-Taro/express-alpine-htmx-sample.git",
   "author": "Shin-Taro <sh.takahashi.113@gmail.com>",
   "license": "none",
