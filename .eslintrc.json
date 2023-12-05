@@ -26,13 +26,13 @@
     "prettier"
   ],
   "rules": {
-    // anyに関するルール
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-unsafe-call": "error",
     "@typescript-eslint/no-unsafe-member-access": "error",
     "@typescript-eslint/no-unsafe-return": "error",
-    // .tsxを許可する設定
+    "react/no-unknown-property": "off",
+    "react/button-has-type": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
     "react/function-component-definition": [
       2,
@@ -43,6 +43,7 @@
     ],
     "react/jsx-props-no-spreading": "off",
     "react/destructuring-assignment": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
       2,
