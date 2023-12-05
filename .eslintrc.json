@@ -1,0 +1,62 @@
+{
+  "root": false,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    // anyに関するルール
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unsafe-call": "error",
+    "@typescript-eslint/no-unsafe-member-access": "error",
+    "@typescript-eslint/no-unsafe-return": "error",
+    // .tsxを許可する設定
+    "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      2,
+      {
+        ".js": "always",
+        ".ts": "always",
+        ".tax": "always"
+      }
+    ],
+    "camelcase": "off",
+    // static exportするためimgタグを使用する
+    "unicorn/prevent-abbreviations": [
+      "warn",
+      {
+        "allowList": {
+          "props": true,
+          "Props": true
+        }
+      }
+    ],
+    "unicorn/no-array-callback-reference": "off"
+  },
+  "ignorePatterns": ["**/dist/**"]
+}
