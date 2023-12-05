@@ -12,6 +12,7 @@ export const Document: FC<PropsWithChildren<Props>> = ({ title, children }) => (
       <meta name="viewport" content="width=device-width" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <title>{title}</title>
+      <script src="https://cdn.tailwindcss.com" />
       <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" />
       <script
         defer
