@@ -50,10 +50,8 @@ const onError = (error: { syscall: unknown; code: unknown }) => {
 const server = http.createServer(app)
 
 const onListening = () => {
-  const addr = server.address()
-  const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr?.port}`
   // eslint-disable-next-line no-console
-  console.log(`Listening on ${bind}`)
+  console.log(`Listening on http://localhost:${port}`)
 }
 
 app.set("port", port)
