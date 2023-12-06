@@ -8,8 +8,7 @@ import { renderToString } from "react-dom/server"
 
 export const loginApiHandler: RequestHandler<DefaultParametersDictionary, string, User> = async (req, res) => {
   const data = req.body
-  const { email } = data
-  const { password } = data
+  const { email, password } = data
   const isValid = Boolean(email) && Boolean(password)
 
   if (isValid) {
