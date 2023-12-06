@@ -40,7 +40,7 @@ export const TabInterface: FC<Props> = (props) => (
               x-bind:disabled={bindDisabled}
               x-on:click={setActive}
               className="min-w-[135px] py-2 px-6 text-center border-t-2 border-x-2 border-gray-500 rounded-t-lg"
-              x-bind:className={bindClass}
+              x-bind:class={bindClass}
             >
               {item.title}
             </button>
