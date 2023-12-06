@@ -8,7 +8,7 @@ import { addDocumentType } from "./modules/addDocumentType"
 
 export const homeRoute = express.Router()
 
-export const HomePageHandler: RequestHandler = async (req, res) => {
+export const homePageHandler: RequestHandler = async (req, res) => {
   const news = await fetchNews()
   const isLoggedIn = await getIsLeggedInState(req.cookies)
   const dependencies = { news, isLoggedIn }

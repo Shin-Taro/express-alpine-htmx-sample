@@ -7,7 +7,7 @@ import { addDocumentType } from "../modules/addDocumentType"
 
 export const homeRoute = express.Router()
 
-export const EntryPageHandler: RequestHandler = async (req, res) => {
+export const entryPageHandler: RequestHandler = async (req, res) => {
   const isLoggedIn = await getIsLeggedInState(req.cookies)
 
   if (isLoggedIn) {
