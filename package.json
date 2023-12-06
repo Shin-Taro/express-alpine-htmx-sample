@@ -8,7 +8,7 @@
   "license": "none",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
-    "tsc": "tsc",
+    "type-check": "tsc --noEmit",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings 0 --cache",
     "fix": "prettier \"./src/**/*.{ts,tsx}\" --write --ignore-path .gitignore && eslint \"./src/**/*.{ts,tsx}\" --fix --max-warnings 0 --cache"
   },
