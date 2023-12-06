@@ -12,11 +12,11 @@ export const MyPageHandler: RequestHandler = async (req, res) => {
   const isLoggedIn = await getIsLeggedInState(req.cookies)
 
   if (!isLoggedIn) {
-    res.redirect("/login")
+    return res.redirect("/login")
   }
 
   const user = await fetchUser()
 
   const html = renderToString(<MyPage {...user} />)
-  res.send(addDocumentType(html))
+  return res.send(addDocumentType(html))
 }

@@ -16,9 +16,9 @@ export const loginApiHandler: RequestHandler<DefaultParametersDictionary, string
     const SuccessDialogHtml = renderToString(<SuccessDialog />)
 
     res.setHeader("Set-Cookie", "user=dummy-user; Path=/;")
-    res.send(SuccessDialogHtml)
+    return res.send(SuccessDialogHtml)
   }
   const ErrorDialogHtml = renderToString(<ErrorDialog />)
 
-  res.send(ErrorDialogHtml)
+  return res.send(ErrorDialogHtml)
 }

@@ -11,9 +11,9 @@ export const LoginPageHandler: RequestHandler = async (req, res) => {
   const isLoggedIn = await getIsLeggedInState(req.cookies)
 
   if (isLoggedIn) {
-    res.redirect("/mypage")
+    return res.redirect("/mypage")
   }
 
   const html = renderToString(<Login />)
-  res.send(addDocumentType(html))
+  return res.send(addDocumentType(html))
 }

@@ -15,9 +15,9 @@ export const logoutApiHandler: RequestHandler<DefaultParametersDictionary, strin
     const SuccessDialogHtml = renderToString(<SuccessDialog />)
 
     res.setHeader("Set-Cookie", `user=; Path=/; Expires=${PastDate};`)
-    res.send(SuccessDialogHtml)
+    return res.send(SuccessDialogHtml)
   }
   const ErrorDialogHtml = renderToString(<ErrorDialog />)
 
-  res.send(ErrorDialogHtml)
+  return res.send(ErrorDialogHtml)
 }
