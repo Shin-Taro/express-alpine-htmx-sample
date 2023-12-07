@@ -2,10 +2,10 @@
   "name": "express-alpine-htmx-sample",
   "version": "1.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "description": "Sample project of UI construction with Alpine.js and htmx and server-side rendering with Express and jsx.",
   "repository": "git@github_Shin-Taro:Shin-Taro/express-alpine-htmx-sample.git",
   "author": "Shin-Taro <sh.takahashi.113@gmail.com>",
-  "license": "none",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
     "type-check": "tsc --noEmit",
